@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Задача 5.</h1>
+
+		<p>
+			Дано кількість секунд, що пройшла від початку доби. Визначити скільки це годин і хвилин
+		</p>
+
+		
+		<script>
+			let numberOfSeconds = parseFloat(prompt('Введіть кількість секунд з початку доби', '3600'))
+			let secondInHour = 3600
+			let secondInMinute = 60
+
+			let hours = Math.floor(numberOfSeconds / secondInHour)
+			let minutes = Math.floor(numberOfSeconds % secondInHour / secondInMinute)
+
+			document.write(`
+				<h1>Результат</h1>
+				<table border="1px">
+						<tr>
+							<th>Кількість секунд</th> 
+							<td>${numberOfSeconds}</td>
+						</tr>
+						<tr>
+							<th>Кількість годин</th>
+							<td>${hours}</td>
+						</tr>
+							<tr>
+							<th>Кількість хвилин</th>
+							<td>${minutes}</td>
+						</tr>
+							</tr>
+							<tr>
+							<th>Від початку доби пройшло</th>
+							<td>${hours} годин, ${minutes} хвилин</td>
+						</tr>
+				</table>
+				`)
+		</script>
+
+		
+		<a href="/lesson-2/index.html">Повернутися до завдань</a>
+</body>
+</html>

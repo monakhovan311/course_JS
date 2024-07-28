@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Задача 0.</h1>
+
+		<p>
+			Обчислити значення виразів:
+		</p>
+		<div>
+			<img src="../img/task-img.png" alt="img">
+		</div>
+
+		
+		<script>
+			let a = parseInt(prompt('Введіть перше число', '2'))
+			let b = parseInt(prompt('Введіть друге число', '2'))
+			let c = parseInt(prompt('Введіть третє число', '2'))
+			let sum1 = a + 12 + b
+			let sum2 = Math.sqrt((a + b) / 2*a ).toFixed(2)
+			let sum3 = Math.cbrt((a + b)*c).toFixed(2)
+			let sum4 = Math.sin(a / -b).toFixed(2)
+			document.write(`
+			<h2>
+				Результат обчислення значення виразів для данних, які ввів користувач:</h2>`)
+				document.write(`
+				<ol>
+					<li>
+						S1 = ${sum1}
+					</li>
+					<li>
+						S2 = ${sum2}
+					</li>
+					<li>
+						S3 = ${sum3}
+					</li>
+					<li>
+						S4 = ${sum4} 
+					</li>
+				</ol>
+				`)
+		</script>
+
+		
+		<a href="../index.html">Повернутися до завдань</a>
+</body>
+</html>

@@ -1,0 +1,68 @@
+@import 'reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300..800&display=swap');
+
+body {
+	background: #71e2f3;
+	font-family: 'Open Sans',sans-serif;
+}
+
+
+.wrapper {
+	min-height: 100%;
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+	& > main {
+		flex-grow: 1;
+	 }
+}
+.block-about {
+	padding-block: 50px;
+	&__container {
+		max-width: 1250px;
+		margin: 0 auto;
+		padding-inline: 15px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		row-gap: 2rem;
+	}
+	
+		// .block-about__title
+
+		&__title {
+			font-size: clamp(1rem, 0.182rem + 4.09vw, 3.25rem);
+			text-align: center;
+			color: #fff;
+			font-weight: 700;
+			letter-spacing: 0.5rem;
+			span {
+				color: #f1f7af;
+			}
+		}
+}
+.menu {
+
+		// .menu__list
+
+		&__list {
+			display: flex;
+			flex-direction: column;
+			row-gap: 1rem;
+		}
+
+		// .menu__link
+
+		&__link {
+			font-size: 1.5rem;
+			transition: color
+			0.3s;
+			color: #fff;
+			display: flex;
+			@media(any-hover:hover) {
+				&:hover {
+					color: #eff161;
+				}
+			}
+		}
+}

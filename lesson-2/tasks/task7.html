@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Задача 6.</h1>
+
+		<p>
+			З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару окремо та загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки.
+		</p>
+
+		
+		<script>
+			let priceOfProductOne = parseInt(prompt('Введіть вартість першого товару', '50'))
+			let quantityOfProductOne = parseInt(prompt('Введіть кількість одиниць першого товару','2'))
+
+			let priceOfProductTwo = parseInt(prompt('Введіть вартість другого товару', '70'))
+			let quantityOfProductTwo = parseInt(prompt('Введіть кількість одиниць другого товару','3'))
+
+			let priceOfProductThree = parseInt(prompt('Введіть вартість третього товару', '90'))
+			let quantityOfProductThree = parseInt(prompt('Введіть кількість одиниць третього товару','10'))
+
+			let firstItem = priceOfProductOne * quantityOfProductOne
+			console.log(firstItem)
+
+			let secondItem = priceOfProductTwo * quantityOfProductTwo
+
+			let thirdItem = priceOfProductThree * quantityOfProductThree
+
+			let totalPrice = firstItem + secondItem + thirdItem
+
+			document.write(`
+				<h1>Чек</h1>
+				<h3>Товар 1:</h3>
+				<div>${quantityOfProductOne} шт. x ${priceOfProductOne} грн = ${firstItem} грн</div>
+
+				<h3>Товар 2:</h3>
+				<div>${quantityOfProductTwo} шт. x ${priceOfProductTwo} грн = ${secondItem} грн</div>
+
+					<h3>Товар 3:</h3>
+				<div>${quantityOfProductThree} шт. x ${priceOfProductThree} грн = ${thirdItem} грн</div>
+
+				<h3>Загальна вартість:</h3>
+				<div>${totalPrice} грн</div>
+				`)
+		</script>
+
+		
+		<a href="/lesson-2/index.html">Повернутися до завдань</a>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Задача 1.</h1>
+
+		<p>
+			Знайти суму, добуток та частку двох дійсних чисел. Результат вивести у формі таблиці
+		</p>
+
+		
+		<script>
+
+		let num1 = parseFloat((prompt('Введіть перше число', '0.00')))
+		let num2 = parseFloat((prompt('Введіть друге число',  '0.00')))
+		let sum = (num1 + num2).toFixed(2)
+		let mult = (num1 * num2).toFixed(2)
+		let division = (num1 / num2).toFixed(2)
+		document.write(`
+			<table border = "1px">
+				<tr>
+					<th>
+						Сума
+					</th>
+					<td>
+						${sum}
+					</td>
+				</tr>
+				<tr>
+					<th>
+						Добуток
+					</th>
+					<td>
+						${mult}
+					</td>
+				</tr>
+				<tr>
+					<th>
+						Частка
+					</th>
+					<td>
+						${division}
+					</td>
+				</tr>
+			</table>`)
+		</script>
+
+		
+		<a href="/lesson-2/index.html">Повернутися до завдань</a>
+</body>
+</html>
