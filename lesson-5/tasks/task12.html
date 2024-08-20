@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Задача 12.</h1>
+
+		<p>
+			Ігровий автомат. Випадково вибираємо зображення у 3 позиціях. Вибір у кожній позиції вибирається як одне з чотирьох зображень. Вивести ці зображення і повідомити виграш користувача (три перших зображення 100 грн, три других – 200, три третіх – 500, три четвертих зображення – 1000грн). Використати цикли і switch (для вибору зображення за номером).
+		</p>
+
+		
+		<script>
+			// const itemImage1 = 1 + Math.floor(Math.random() * 4)
+			// document.write(`<img src="../img/img${itemImage1}.svg">`)
+
+			// const itemImage2 = 1 + Math.floor(Math.random() * 4)
+			// document.write(`<img src="../img/img${itemImage2}.svg">`)
+
+			// const itemImage3 = 1 + Math.floor(Math.random() * 4)
+			// document.write(`<img src="../img/img${itemImage3}.svg">`)
+
+			// let prize = 0
+			// if(itemImage1 === 1 && itemImage2 === 1 && itemImage3 === 1) prize = 100
+			// if(itemImage1 === 2 && itemImage2 === 2 && itemImage3 === 2) prize = 200
+			// if(itemImage1 === 3 && itemImage2 === 3 && itemImage3 === 3) prize = 500
+			// if(itemImage1 === 4 && itemImage2 === 4 && itemImage3 === 4) prize = 1000
+
+			// document.write(`Ви Виграли ${prize}`)
+			let prize = 0
+			let sum = 0
+			for(let i = 1; i <= 3; i++) {
+			const randImageInd = 1 + Math.floor(Math.random() * 4)
+			document.write(`<img src="../img/img${randImageInd}.svg">`)
+			sum += Math.pow(10, randImageInd)
+			}
+
+			switch (sum) {
+				case 30: 
+					prize = 100
+					break;
+				case 300: 
+					prize = 200
+					break;
+				case 3000: 
+					prize = 500
+					break;
+				case 30000: 
+					prize = 1000
+					break;
+			}
+			document.write(`Ви виграли ${prize} грн`)
+
+		</script>
+		
+<a href="../index.html">Повернутися до завдань</a>
+</body>
+</html>
